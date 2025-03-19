@@ -1,16 +1,16 @@
 # 🚀 NestJS Backend Project
 
 ## 📖 Table of Contents
-- [About](#about)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Running the Project](#running-the-project)
-- [Running Tests](#running-tests)
-- [API Documentation](#api-documentation)
-- [Environment Variables](#environment-variables)
+- [About]
+- [Features]
+- [Tech Stack]
+- [Project Structure]
+- [Installation]
+- [Configuration]
+- [Running the Project]
+- [Running Tests]
+- [API Documentation]
+- [Environment Variables]
 
 ---
 
@@ -108,7 +108,8 @@ npm install
 
 ## ⚙️ Configuration
 
-### **1️⃣ Set up Environment Variables (`.env`)**
+### Set up Environment Variables (`.env`)
+#### 1) Windows
 Create a `.env` file in the root directory and configure:
 ```
 PORT=3000
@@ -119,12 +120,16 @@ LOGGER_LEVEL=info
 NODE_ENV=development
 ```
 
-### **2️⃣ Database Setup**
-For **MongoDB** (via Docker), run:
-```sh
-docker run --name nest-mongo -p 27017:27017 -d mongo
+#### 2) Linux
+Create a `.env` file in the root directory and configure:
 ```
-
+PORT=3000
+MONGODB_URI=mongodb://mongo:27017/nestjs-app
+JWT_SECRET=your_jwt_secret
+JWT_EXPIRATION=3600s
+LOGGER_LEVEL=info
+NODE_ENV=development
+```
 ---
 
 ## 🚀 Running the Project
@@ -134,6 +139,9 @@ docker run --name nest-mongo -p 27017:27017 -d mongo
 npm run start:dev
 ```
 Access the API at: **`http://localhost:3000`**
+
+Access the Swagger API documentation at: **`http://localhost:3000/documentation`**
+
 
 ### **2️⃣ Start in Production Mode**
 ```sh
@@ -155,9 +163,9 @@ npm run test
 npm run test:e2e
 ```
 
-### **3️⃣ Run Tests with Coverage**
+## ✅ Running project in Docker
 ```sh
-npm run test:cov
+docker compose up --build
 ```
 
 ---
@@ -192,4 +200,8 @@ SwaggerModule.setup('documentation', app, document);
 
 ---
 
+## Project Running result
+![Project Architecture Design](/result_linux.png)
+
+---
 ### I just simply implemented auth unit testing, and I will completely implement unit test cases if there is more time.
