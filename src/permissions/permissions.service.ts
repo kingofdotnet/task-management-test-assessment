@@ -7,9 +7,9 @@ import { UpdatePermissionDto } from './dto/update-permission.dto';
 
 import { GetUserAllDto } from './dto/get-user-all.dto';
 import { PermissionLevel } from './permission-level.enum';
-import { UpdateProjectDto } from 'src/projects/dto/update-project.dto';
-import { ProjectsService } from 'src/projects/projects.service';
-import { Project } from 'src/projects/schemas/project.schema';
+import { UpdateProjectDto } from '../projects/dto/update-project.dto';
+import { ProjectsService } from '../projects/projects.service';
+import { Project } from '../projects/schemas/project.schema';
 
 @Injectable()
 export class PermissionsService {

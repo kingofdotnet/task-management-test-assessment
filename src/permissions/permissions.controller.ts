@@ -24,8 +24,8 @@ import { Permission } from './schemas/permission.schema';
 import { UpdatePermissionDto } from './dto/update-permission.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { PermissionDecorator } from '../auth/permissions.decorator';
-import { PermissionsGuard } from 'src/auth/guards/permissions.guard';
-import { UpdateProjectDto } from 'src/projects/dto/update-project.dto';
+import { PermissionsGuard } from '../auth/guards/permissions.guard';
+import { UpdateProjectDto } from '../projects/dto/update-project.dto';
 
 @ApiTags('Permission')
 @Controller('permissions')
