@@ -5,6 +5,7 @@ FROM node:22
 WORKDIR /app
 
 # Copy package.json and package-lock.json (or yarn.lock)
+COPY .env.example .env
 COPY package*.json ./
 
 # Install dependencies
